@@ -18,25 +18,25 @@
 
 Uma API REST simples para gerenciamento de usuários desenvolvida com Node.js, Express e **MongoDB** utilizando Prisma ORM.
 
-> 🍃 **Esta API foi desenvolvida especificamente para MongoDB** e utiliza ObjectIds como identificadores únicos.
+>  **Esta API foi desenvolvida especificamente para MongoDB** e utiliza ObjectIds como identificadores únicos.
 
 ## 📋 Funcionalidades
 
-- ✅ **CRUD Completo** para usuários
-- ✅ **Validação de dados**
-- ✅ **Tratamento de erros**
-- ✅ **CORS configurado**
-- ✅ **Operações parciais (PATCH)**
+-  **CRUD Completo** para usuários
+-  **Validação de dados**
+-  **Tratamento de erros**
+-  **CORS configurado**
+-  **Operações parciais (PATCH)**
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Node.js** - Runtime JavaScript
 - **Express.js** - Framework web
 - **Prisma** - ORM para banco de dados
-- **🍃 MongoDB** - Banco de dados NoSQL (Principal)
+- ** MongoDB** - Banco de dados NoSQL (Principal)
 - **CORS** - Middleware para Cross-Origin Resource Sharing
 
-### 🎯 Banco de Dados
+###  Banco de Dados
 
 Esta API foi projetada **exclusivamente para MongoDB** e aproveita suas características:
 
@@ -45,7 +45,7 @@ Esta API foi projetada **exclusivamente para MongoDB** e aproveita suas caracter
 - **Escalabilidade horizontal** nativa
 - **Consultas rápidas** e eficientes
 
-## 📦 Dependências
+##  Dependências
 
 ```json
 {
@@ -56,7 +56,7 @@ Esta API foi projetada **exclusivamente para MongoDB** e aproveita suas caracter
 }
 ```
 
-## ⚙️ Configuração
+##  Configuração
 
 ### 1. Clone o repositório
 
@@ -70,7 +70,7 @@ https://github.com/ElissonAmaro/Api_usuarios.git
 npm install
 ```
 
-### 3. Configure as variáveis de ambiente 🍃 MongoDB
+### 3. Configure as variáveis de ambiente  MongoDB
 
 Copie o arquivo `.env` e configure sua conexão **MongoDB**:
 
@@ -78,7 +78,7 @@ Copie o arquivo `.env` e configure sua conexão **MongoDB**:
 DATABASE_URL="sua_string_de_conexao_mongodb"
 ```
 
-**📋 Exemplos de URL do MongoDB:**
+** Exemplos de URL do MongoDB:**
 
 
 
@@ -88,7 +88,7 @@ DATABASE_URL="sua_string_de_conexao_mongodb"
 DATABASE_URL="mongodb+srv://usuario:senha@cluster.mongodb.net/database_name"
 ```
 
-> ⚠️ **Importante:** Esta API requer MongoDB como banco de dados. Certifique-se de ter uma instância do MongoDB rodando localmente ou use o MongoDB Atlas (cloud).
+>  **Importante:** Esta API requer MongoDB como banco de dados. Certifique-se de ter uma instância do MongoDB rodando localmente ou use o MongoDB Atlas (cloud).
 
 ### 4. Configure o banco de dados
 
@@ -108,7 +108,7 @@ node server.js
 
 O servidor estará rodando em `http://localhost:3000`
 
-## 🌐 Endpoints da API
+##  Endpoints da API
 
 ### Base URL
 
@@ -227,7 +227,7 @@ DELETE /usuarios/:id
 }
 ```
 
-## 🧪 Testando com Postman
+##  Testando com Postman
 
 ### Configuração Inicial
 
@@ -238,7 +238,7 @@ DELETE /usuarios/:id
 
 ### Testando os Endpoints
 
-#### 1. 🆕 Criar Usuário
+#### 1.  Criar Usuário
 
 - **Método:** `POST`
 - **URL:** `{{base_url}}/usuarios`
@@ -254,21 +254,21 @@ DELETE /usuarios/:id
   }
   ```
 
-#### 2. 📃 Listar Todos os Usuários
+#### 2.  Listar Todos os Usuários
 
 - **Método:** `GET`
 - **URL:** `{{base_url}}/usuarios`
 - **Headers:** Nenhum necessário
 - **Body:** Nenhum
 
-#### 3. 🔍 Buscar Usuário por ID
+#### 3.  Buscar Usuário por ID
 
 - **Método:** `GET`
 - **URL:** `{{base_url}}/usuarios/64abc123...`
   - _Substitua `64abc123...` pelo ID real recebido ao criar um usuário_
 - **Headers:** Nenhum necessário
 
-#### 4. ✏️ Atualizar Usuário (Completo)
+#### 4.  Atualizar Usuário (Completo)
 
 - **Método:** `PUT`
 - **URL:** `{{base_url}}/usuarios/64abc123...`
@@ -284,7 +284,7 @@ DELETE /usuarios/:id
   }
   ```
 
-#### 5. ⚡ Atualizar Usuário (Parcial)
+#### 5.  Atualizar Usuário (Parcial)
 
 - **Método:** `PATCH`
 - **URL:** `{{base_url}}/usuarios/64abc123...`
@@ -299,14 +299,14 @@ DELETE /usuarios/:id
   }
   ```
 
-#### 6. 🗑️ Deletar Usuário
+#### 6.  Deletar Usuário
 
 - **Método:** `DELETE`
 - **URL:** `{{base_url}}/usuarios/64abc123...`
 - **Headers:** Nenhum necessário
 - **Body:** Nenhum
 
-### 📋 Fluxo de Testes Recomendado
+###  Fluxo de Testes Recomendado
 
 1. **Inicie o servidor** (`node server.js`)
 2. **Teste POST** para criar alguns usuários
@@ -315,19 +315,19 @@ DELETE /usuarios/:id
 5. **Teste GET por ID**, **PUT**, **PATCH**
 6. **Teste DELETE** por último
 
-## 📊 Modelo de Dados (MongoDB)
+##  Modelo de Dados (MongoDB)
 
 ### User - Documento MongoDB
 
 ```javascript
 {
-  id: String,      // 🍃 ObjectId do MongoDB (gerado automaticamente)
+  id: String,      //  ObjectId do MongoDB (gerado automaticamente)
   email: String,   // Email único do usuário (índice único)
   name: String     // Nome do usuário
 }
 ```
 
-**🔥 Características do MongoDB:**
+** Características do MongoDB:**
 
 - **ObjectId:** Identificadores únicos de 24 caracteres hexadecimais
 - **Documento JSON:** Estrutura flexível e escalável
@@ -350,7 +350,7 @@ npx prisma db push
 npx prisma studio
 ```
 
-## 🚨 Tratamento de Erros
+##  Tratamento de Erros
 
 A API retorna códigos de status HTTP apropriados e mensagens de erro descritivas:
 
@@ -366,7 +366,7 @@ A API retorna códigos de status HTTP apropriados e mensagens de erro descritiva
 }
 ```
 
-## 📝 Notas Importantes
+##  Notas Importantes
 
 1. O campo `name`
 2. O campo `email` deve ser único
