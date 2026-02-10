@@ -61,8 +61,7 @@ Esta API foi projetada **exclusivamente para MongoDB** e aproveita suas caracter
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/ElissonAmaro/apiFilmes.git
-cd Api
+https://github.com/ElissonAmaro/Api_usuarios.git
 ```
 
 ### 2. Instale as dependências
