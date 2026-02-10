@@ -20,7 +20,7 @@ Uma API REST simples para gerenciamento de usuários desenvolvida com Node.js, E
 
 >  **Esta API foi desenvolvida especificamente para MongoDB** e utiliza ObjectIds como identificadores únicos.
 
-## 📋 Funcionalidades
+##  Funcionalidades
 
 -  **CRUD Completo** para usuários
 -  **Validação de dados**
